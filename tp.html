@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heroku Deployment</title>
+    <style>
+      @charset "UTF-8";
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #393939;
+        color: white;
+        font-family: 'Hachi Maru Pop', serif;
+        font-weight: 400;
+        font-style: normal;
+        text-align: center;
+      }
+
+      /* 全体 */
+      body {
+        padding: 20px;
+      }
+
+      /* 動画フレームのスタイル */
+      .video-frame {
+        position: relative;
+        width: 100%;
+        max-width: 800px;
+        height: 450px; /* フレームの高さを固定 */
+        overflow: hidden; /* はみ出し部分を非表示に */
+        margin: 20px auto;
+      }
+
+      .video-frame iframe {
+        position: absolute;
+        top: -23%; /* 上方向に移動して中央部分を表示 */
+        left: 0;
+        width: 100%;
+        height: 100%; /* フレーム内に動画を拡大 */
+        transform: translateY(10%); /* 中央位置を微調整 */
+        border: none;
+      }
+
+      /* pタグのデザイン */
+      p {
+        margin: 20px auto 50px;
+        max-width: 500px;
+        line-height: 1.6;
+        font-size: 1rem;
+      }
+
+      /* etc クラスのスタイル */
+      .etc {
+        display: flex;
+        flex-wrap: wrap; /* 折り返し対応 */
+        justify-content: center;
+        margin: 20px auto;
+      }
+
+      .etc1,
+      .etc2 {
+        margin: 10px;
+        padding: 10px;
+        width: 100%;
+        max-width: 300px;
+        text-align: left; /* 左揃え */
+        font-size: 0.9rem;
+      }
+
+      /* リストの「・」を消す */
+      li {
+        list-style-type: none;
+        margin-bottom: 10px;
+      }
+
+      /* スマホ画面用調整 */
+      @media (max-width: 600px) {
+        p {
+          font-size: 0.9rem;
+        }
+
+        .etc1,
+        .etc2 {
+          width: 100%; /* フル幅 */
+        }
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <p>
+      3/13
+      サーブレットとJSPで作成したWebアプリをHerokuにデプロイしていますが、現在データベース接続のエラーに苦戦中です。ローカル環境ではMySQLを使用して正常に動作しており、その成功した動作の動画を代わりに公開します。エラーが解消次第、内容を更新する予定です。
+    </p>
+
+    <div class="video-frame">
+      <iframe
+        src="https://www.youtube.com/embed/6WM3gXrY8Jw?controls=0"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    <div class="etc">
+      <ul class="etc1">
+        <li><strong>機能</strong></li>
+        <li>★ログイン/ログアウト</li>
+        <li>★つぶやき投稿</li>
+        <li>★投稿削除/全削除</li>
+        <li>★いいね</li>
+        <li>★一般/管理者分け</li>
+        <li>★参加者リスト（管理者のみ）</li>
+        <li>★会員登録（管理者のみ）</li>
+      </ul>
+      <ul class="etc2">
+        <li><strong>使用言語</strong></li>
+        <li>★バックエンド：Java(サーブレット/JSP)</li>
+        <li>★フロントエンド：HTML/CSS</li>
+      </ul>
+    </div>
+  </body>
+</html>
